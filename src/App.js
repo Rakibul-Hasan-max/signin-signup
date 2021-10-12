@@ -6,6 +6,7 @@ import Login from './Login/Login';
 import Register from './Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import Shipping from './components/Shipping/Shipping';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -26,9 +27,9 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/shipping">
+            <PrivateRoute path="/shipping">
               <Shipping></Shipping>
-            </Route>
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
       </AuthProvider>
